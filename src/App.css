@@ -42,13 +42,13 @@ height: 100%;
 object-fit: cover;
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
   .appcanvas{
-    top: 170px
+    top: 150px
   }
 
   .titulo{
-font-size: 30px;
+font-size: 35px;
   }
 
   
