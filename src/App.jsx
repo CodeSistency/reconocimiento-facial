@@ -8,7 +8,7 @@ function App(){
 
   // LOAD FROM USEEFFECT
   useEffect(()=>{
-    startVideo()
+    videoRef && startVideo()
     videoRef && loadModels()
 
     //new
