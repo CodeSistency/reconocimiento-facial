@@ -165,7 +165,7 @@ function App(){
 
   return (
     <div className="myapp">
-      <h1 color='black' style={{textShadow:' gray 1px 0 10px', textAlign: 'center'}}>Face Detection</h1>
+      <h1 color='black' className='titulo' style={{textShadow:' gray 1px 0 10px', textAlign: 'center'}}>Face Detection</h1>
     {/* <h1>FAce Detection</h1> */}
     {!active && <h2  style={{textShadow:' gray 1px 0 10px', textAlign: 'center', color: 'black'}}>Cargando...</h2>}
       <div className='container' style={{ margin: '10px' }}>
