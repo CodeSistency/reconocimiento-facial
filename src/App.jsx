@@ -76,17 +76,15 @@ function App(){
 
 
   // OPEN YOU FACE WEBCAM
-  const startVideo = () => {
-    navigator?.mediaDevices
-      .getUserMedia({ video: true })
-      .then((currentStream) => {
-        videoRef?.current?.srcObject = currentStream;
-      })
-      .catch((err) => {
-        console.log('Error accessing camera:', err);
-      });
-  };
-  
+  const startVideo = ()=>{
+    navigator?.mediaDevices?.getUserMedia({video:true})
+    .then((currentStream)=>{
+      videoRef.current.srcObject = currentStream
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
   // LOAD MODELS FROM FACE API
 
   const loadModels = ()=>{
