@@ -159,11 +159,11 @@ function App(){
 
   return (
     <div className="myapp">
-      <h1 color='black'>Face Detection</h1>
+      <h1 color='black' style={{textShadow:' gray 1px 0 10px', textAlign: 'center'}}>Face Detection</h1>
     {/* <h1>FAce Detection</h1> */}
-      <div className='container' style={{  height: 'auto', width: '80%' }}>
+      <div className='container' style={{ margin: '10px' }}>
         
-      <video crossOrigin="anonymous" className='video' style={{height: '70vh', borderRadius: '10px', border: '4px solid rgb(241, 241, 241)', boxShadow: '0 0 5px 3px rgba(0, 0, 0, 0.367)'}} ref={videoRef} autoPlay></video>
+      <video crossOrigin="anonymous" className='video' style={{height: '100%', borderRadius: '10px', border: '4px solid rgb(241, 241, 241)', boxShadow: '0 0 5px 3px rgba(0, 0, 0, 0.367)'}} ref={videoRef} autoPlay></video>
       </div>
       <canvas ref={canvasRef} 
       className="appcanvas"/>
