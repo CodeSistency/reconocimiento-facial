@@ -1,10 +1,12 @@
-import {useRef,useEffect} from 'react'
+import {useRef,useEffect, useState} from 'react'
 import './App.css'
 import * as faceapi from 'face-api.js'
 
 function App(){
   const videoRef = useRef()
   const canvasRef = useRef()
+
+  const [active, setActive] = useState(false)
 
   // LOAD FROM USEEFFECT
   useEffect(()=>{
@@ -117,6 +119,10 @@ function App(){
         const { width, height } = video.getBoundingClientRect();
         console.log(width, height, video)
 
+        
+          
+        
+
         const videoWidth = video.offsetWidth
       const videoHeight = video.offsetHeight
 
@@ -153,7 +159,7 @@ function App(){
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
 
-
+      setActive(true) 
     },1000)
   }
 
@@ -161,8 +167,9 @@ function App(){
     <div className="myapp">
       <h1 color='black' style={{textShadow:' gray 1px 0 10px', textAlign: 'center'}}>Face Detection</h1>
     {/* <h1>FAce Detection</h1> */}
+    {!active && <h2  style={{textShadow:' gray 1px 0 10px', textAlign: 'center', color: 'black'}}>Cargando...</h2>}
       <div className='container' style={{ margin: '10px' }}>
-        
+      
       <video crossOrigin="anonymous" className='video' style={{height: '100%', borderRadius: '10px', border: '4px solid rgb(241, 241, 241)', boxShadow: '0 0 5px 3px rgba(0, 0, 0, 0.367)'}} ref={videoRef} autoPlay></video>
       </div>
       <canvas ref={canvasRef} 
